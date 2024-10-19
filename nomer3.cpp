@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 #include <random>
-
 int ma(std::vector<int>& massive){
     int maxm = 0;
     for (int rt:massive){
@@ -42,7 +41,13 @@ int main(){
         std::cout << l[i] << " ";
     }
     std::cout<<" "<<std::endl;
-    int otvet=argmax(l);
-    std::cout<<otvet<<std::endl;
+    int len=l.size();
+    if (len==0){
+        std::cout<<"Массив пуст"<<-1<<std::endl;
+    }
+    else{
+        int otvet=argmax(l);
+        std::cout<<otvet<<std::endl;
+    }
     return 0;
 }
